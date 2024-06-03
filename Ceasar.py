@@ -21,20 +21,3 @@ def cesar(this_direction, this_text, this_shift):
             new_word += letter
     print(new_word)
 
-
-finish = False
-while not finish:
-
-    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-    text = input("Type your message:\n").lower()
-    shift = int(input("Type the shift number:\n")) % 26
-    cesar(direction, text, shift)
-    ask_for_continue = input("Do you want to continue?(Enter y for Yes and n for No)\n").lower()
-    if ask_for_continue == "y":
-        os.system('clear')
-        finish = False
-
-
-    else:
-        print("GOOD BYE")
-        finish = True
